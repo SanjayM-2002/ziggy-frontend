@@ -75,7 +75,7 @@ const Signup = () => {
             <Footer
               label={'Already have an account?'}
               buttonText={'Signin'}
-              to={'/signin'}
+              to={'/login'}
             />
           </div>
         </div>

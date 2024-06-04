@@ -41,11 +41,20 @@ function App() {
               currentUser && !currentUser.error ? (
                 <Dashboard />
               ) : (
-                <Navigate to={'/signin'} />
+                <Navigate to={'/login'} />
               )
             }
           />
-          <Route path='/placeOrder' element={<PlaceOrder />} />
+          <Route
+            path='/placeOrder'
+            element={
+              currentUser && !currentUser.error ? (
+                <PlaceOrder />
+              ) : (
+                <Navigate to={'/login'} />
+              )
+            }
+          />
         </Routes>
       </div>
     </>
